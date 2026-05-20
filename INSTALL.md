@@ -37,7 +37,6 @@ git clone https://github.com/Harryleft/dongchao-openclaw-skills.git
 |------------|------------|
 | `feishu-*` 开头 | `$AGENT_ROOT/plugin-skills/` |
 | `miaoda-*` 开头 | `$AGENT_ROOT/plugin-skills/` |
-| `yao-tutorial-skill` | `$AGENT_ROOT/plugin-skills/` |
 | 其他 | `$AGENT_ROOT/skills/` |
 
 ```bash
@@ -49,7 +48,7 @@ for skill in feishu-ai-components feishu-ai-viz-components feishu-bitable-design
 done
 
 # 妙搭教程类 Skill
-for skill in miaoda-translate miaoda-tutorial yao-tutorial-skill; do
+for skill in miaoda-translate miaoda-tutorial; do
   cp -r /tmp/dongchao-openclaw-skills/skills/$skill $AGENT_ROOT/plugin-skills/
 done
 
@@ -76,8 +75,7 @@ done
       "miaoda-translate": { "enabled": true },
       "miaoda-tutorial": { "enabled": true },
       "openclaw-upgrade-troubleshoot": { "enabled": true },
-      "superforecasting": { "enabled": true },
-      "yao-tutorial-skill": { "enabled": true }
+      "superforecasting": { "enabled": true }
     }
   }
 }
