@@ -1,0 +1,73 @@
+{
+  "topic": "",
+  "audience": {
+    "level": "beginner | intermediate | advanced",
+    "role": "客户业务人员 | 客户IT | 客户管理层 | FDE新人 | 其他",
+    "prior_knowledge": "",
+    "target_outcome": ""
+  },
+  "product": "飞书多维表格 | aily | 妙搭 | 飞书AI工作台 | 其他",
+  "industry": "制造业 | 零售 | 医疗 | 教育 | 金融 | 互联网 | 其他",
+  "tutorial_type": "落地指南 | 培训手册 | 快速上手 | 方案说明",
+  "language": "zh-CN",
+  "user_materials": {
+    "notes": [],
+    "urls": [],
+    "files": [],
+    "named_references": [],
+    "must_use": [],
+    "nice_to_use": [],
+    "do_not_use": [],
+    "style_references": [],
+    "sufficiency_tier": "auto: rich | moderate | thin"
+  },
+  "scope": {
+    "desired_length": "auto: as long as needed for the learner to execute independently",
+    "chapter_count": "auto (3-4 for 快速上手, 4-6 for 培训手册, 5-8 for 方案说明, 6-10 for 落地指南)",
+    "time_budget": "2h default",
+    "must_include": [],
+    "avoid": []
+  },
+  "research": {
+    "priority_rule": "1. 客户业务数据 2. 同行业已落地案例(gbrain) 3. 飞书产品文档 4. 外部行业研究",
+    "source_layers": [
+      "gbrain (同行业案例)",
+      "feishu_search_doc_wiki (产品文档)",
+      "web_search (行业研究)",
+      "客户提供的资料"
+    ],
+    "required_domains": [],
+    "forbidden_domains": [],
+    "freshness_requirement": "飞书产品截图≤3个月; 行业数据≤1年",
+    "external_research_level": "auto: gap-check | targeted | full-source-ladder"
+  },
+  "visuals": {
+    "one_visual_per_chapter": true,
+    "preferred_types": [
+      "mermaid_flow",
+      "feishu_screenshot",
+      "comparison_table",
+      "callout_highlight",
+      "architecture_diagram"
+    ],
+    "style_notes": "飞书文档原生格式优先; 禁止假截图; 用 Mermaid 做流程图"
+  },
+  "outputs": [
+    "feishu_doc",
+    "markdown",
+    "pdf"
+  ],
+  "quality_control": {
+    "chapter_quality_review": true,
+    "review_file": "research/chapter-quality-review.md",
+    "depth_rule": "落地可执行性: 读者能否照做?",
+    "fde_gates": [
+      "落地可执行性",
+      "产品准确性",
+      "行业适配性",
+      "消耗关联性",
+      "行动项可追踪"
+    ]
+  },
+  "citation_style": "客户案例用行业+规模描述; 公开文档不显示内部source ID; research/ 目录保留完整溯源"
+}
