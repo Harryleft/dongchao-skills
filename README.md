@@ -1,6 +1,4 @@
-# Dongchao's OpenClaw Skills
-
-沈东潮的 OpenClaw 自定义 Skill 集合，供团队复用。
+# Dongchao's Skills
 
 ## Skills 列表
 
