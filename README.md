@@ -1,7 +1,5 @@
 # Dongchao's Skills
 
-## Skills 列表
-
 | Skill | 说明 |
 |-------|------|
 | `dongchao-feishu-ai-components` | 飞书 AI 组件 |
