@@ -214,7 +214,7 @@
 ## SKILL 元信息
 
 ```yaml
-name: feishu-ai-viz-components
+name: dongchao-feishu-ai-viz-components
 description: 飞书AI可视化图表组件选型指南 — 根据业务场景匹配最合适的图表
 version: 1.0.0
 author: 沈东潮

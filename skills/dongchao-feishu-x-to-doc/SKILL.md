@@ -1,5 +1,5 @@
 ---
-name: feishu-x-to-doc
+name: dongchao-feishu-x-to-doc
 version: 1.0.0
 description: |-
   从 X/Twitter 提取推文或长文（Article）内容，翻译为中文（如原文为英文），
@@ -20,7 +20,7 @@ tools:
   - feishu_update_doc
 mutating: true
 depends-on:
-  - miaoda-translate
+  - dongchao-miaoda-translate
   - feishu-create-doc
 ---
 
@@ -167,7 +167,7 @@ tweet.article 存在？
 - 原文语言为中文 → 保留原文
 - 其他语言 → 翻译为中文
 
-**翻译时加载 `miaoda-translate` SKILL**，遵循其三种模式、术语处理、格式保留、质量检查规则。
+**翻译时加载 `dongchao-miaoda-translate` SKILL**，遵循其三种模式、术语处理、格式保留、质量检查规则。
 
 **翻译策略：**
 - 长文（Article）：使用普通模式，先分析内容提取术语和难点，再翻译全文，确保术语一致
@@ -175,7 +175,7 @@ tweet.article 存在？
 - 用户要求"精翻"时：使用精细模式（分析→翻译→审校→润色）
 - 互动数据、用户名、链接等元信息不翻译
 
-**核心翻译原则（来自 miaoda-translate）：**
+**核心翻译原则（来自 dongchao-miaoda-translate）：**
 - **重写而非翻译**：用中文自然重写，不是逐句翻译。检验标准："读起来像是中文原创的吗？"
 - **隐喻按意图翻译**：不直译字面意象，翻译作者意图
 - **保留情感色彩**：不扁平化原文的情感表达
@@ -273,7 +273,7 @@ curl fxtwitter API ──→ 失败 → 重试/浏览器回退
 转换为 Markdown（处理样式/实体/媒体）
     │
     ▼
-英文？──→ 是 → 加载 miaoda-translate 翻译
+英文？──→ 是 → 加载 dongchao-miaoda-translate 翻译
     │         否 → 保留原文
     ▼
 构建飞书 Markdown（元信息 + 正文 + 格式增强）

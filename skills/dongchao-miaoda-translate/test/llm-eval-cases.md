@@ -1,4 +1,4 @@
-# miaoda-translate LLM Eval Cases
+# dongchao-miaoda-translate LLM Eval Cases
 # These test cases verify translation quality, not code behavior.
 # Run manually: compare agent output against expected quality criteria.
 

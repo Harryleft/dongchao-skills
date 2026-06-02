@@ -5,7 +5,7 @@
 ## 仓库地址
 
 ```
-https://github.com/Harryleft/dongchao-openclaw-skills.git
+https://github.com/Harryleft/dongchao-skills.git
 ```
 
 ## 安装步骤
@@ -26,7 +26,7 @@ openclaw status
 
 ```bash
 cd /tmp
-git clone https://github.com/Harryleft/dongchao-openclaw-skills.git
+git clone https://github.com/Harryleft/dongchao-skills.git
 ```
 
 ### Step 3：复制 Skill
@@ -35,26 +35,26 @@ git clone https://github.com/Harryleft/dongchao-openclaw-skills.git
 
 | Skill 名称 | 安装目标位置 |
 |------------|------------|
-| `feishu-*` 开头 | `$AGENT_ROOT/plugin-skills/` |
-| `miaoda-*` 开头 | `$AGENT_ROOT/plugin-skills/` |
+| `dongchao-feishu-*` 开头 | `$AGENT_ROOT/plugin-skills/` |
+| `dongchao-miaoda-*` 开头 | `$AGENT_ROOT/plugin-skills/` |
 | 其他 | `$AGENT_ROOT/skills/` |
 
 ```bash
 AGENT_ROOT=~/workspace/agent
 
 # 飞书/妙搭插件类 Skill
-for skill in feishu-ai-components feishu-ai-viz-components feishu-bitable-design feishu-cron feishu-x-to-doc; do
-  cp -r /tmp/dongchao-openclaw-skills/skills/$skill $AGENT_ROOT/plugin-skills/
+for skill in dongchao-feishu-ai-components dongchao-feishu-ai-viz-components dongchao-feishu-bitable-design dongchao-feishu-cron dongchao-feishu-x-to-doc; do
+  cp -r /tmp/dongchao-skills/skills/$skill $AGENT_ROOT/plugin-skills/
 done
 
 # 妙搭教程类 Skill
-for skill in miaoda-translate miaoda-tutorial; do
-  cp -r /tmp/dongchao-openclaw-skills/skills/$skill $AGENT_ROOT/plugin-skills/
+for skill in dongchao-miaoda-translate dongchao-miaoda-tutorial; do
+  cp -r /tmp/dongchao-skills/skills/$skill $AGENT_ROOT/plugin-skills/
 done
 
 # 通用类 Skill
-for skill in founders-playbook openclaw-upgrade-troubleshoot superforecasting; do
-  cp -r /tmp/dongchao-openclaw-skills/skills/$skill $AGENT_ROOT/skills/
+for skill in dongchao-founders-playbook dongchao-openclaw-upgrade-troubleshoot dongchao-superforecasting; do
+  cp -r /tmp/dongchao-skills/skills/$skill $AGENT_ROOT/skills/
 done
 ```
 
@@ -66,16 +66,16 @@ done
 {
   "skills": {
     "entries": {
-      "feishu-ai-components": { "enabled": true },
-      "feishu-ai-viz-components": { "enabled": true },
-      "feishu-bitable-design": { "enabled": true },
-      "feishu-cron": { "enabled": true },
-      "feishu-x-to-doc": { "enabled": true },
-      "founders-playbook": { "enabled": true },
-      "miaoda-translate": { "enabled": true },
-      "miaoda-tutorial": { "enabled": true },
-      "openclaw-upgrade-troubleshoot": { "enabled": true },
-      "superforecasting": { "enabled": true }
+      "dongchao-feishu-ai-components": { "enabled": true },
+      "dongchao-feishu-ai-viz-components": { "enabled": true },
+      "dongchao-feishu-bitable-design": { "enabled": true },
+      "dongchao-feishu-cron": { "enabled": true },
+      "dongchao-feishu-x-to-doc": { "enabled": true },
+      "dongchao-founders-playbook": { "enabled": true },
+      "dongchao-miaoda-translate": { "enabled": true },
+      "dongchao-miaoda-tutorial": { "enabled": true },
+      "dongchao-openclaw-upgrade-troubleshoot": { "enabled": true },
+      "dongchao-superforecasting": { "enabled": true }
     }
   }
 }
@@ -96,7 +96,7 @@ openclaw gateway restart
 ### Step 6：清理 & 验证
 
 ```bash
-rm -rf /tmp/dongchao-openclaw-skills
+rm -rf /tmp/dongchao-skills
 openclaw skills check
 ```
 

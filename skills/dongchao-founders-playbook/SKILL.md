@@ -227,7 +227,7 @@ AI最危险的，不是它会犯错，而是它会用同样的热情帮你把烂
 ## SKILL 元信息
 
 ```yaml
-name: founders-playbook
+name: dongchao-founders-playbook
 description: 基于Anthropic创始人手册的AI-Native创业四阶段框架
 version: 1.0.0
 author: Anthropic（沈东潮编译）

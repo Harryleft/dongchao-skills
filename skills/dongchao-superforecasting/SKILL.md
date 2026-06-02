@@ -223,7 +223,7 @@ Brier Score = (预测概率 — 实际结果)²
 ## SKILL 元信息
 
 ```yaml
-name: superforecasting
+name: dongchao-superforecasting
 description: 基于Tetlock超级预测法的概率化决策框架 — 把模糊判断变成可检验的预测
 version: 1.0.0
 author: 沈东潮（基于Philip E. Tetlock《Superforecasting》编译）

@@ -1,5 +1,5 @@
 ---
-name: openclaw-upgrade-troubleshoot
+name: dongchao-openclaw-upgrade-troubleshoot
 description: "Use when OpenClaw upgrade/update causes gateway connection failure, protocol mismatch, pairing code prompt, or version mismatch between CLI and Gateway process. 触发词：升级后连不上, gateway closed 1006, protocol mismatch, 升级后飞书无法使用, pairing code, 版本不匹配, upgrade broken, gateway 1006, openclaw 升级, 更新后故障"
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: miaoda-tutorial
+name: dongchao-miaoda-tutorial
 version: 1.2.0
 description: |-
   为 FDE（前线部署工程师）定制的教程生成技能。输入主题+参考资料，
@@ -26,7 +26,7 @@ tools:
   - web_search
 mutating: true
 depends-on:
-  - miaoda-translate
+  - dongchao-miaoda-translate
   - feishu-create-doc
   - lark-minutes
   - lark-vc
@@ -68,7 +68,7 @@ depends-on:
 ```
 妙记 URL → 提取 minute_token → vc +notes 获取逐字稿/总结/章节
          → 用逐字稿做用户资料（must_use）
-         → 走 miaoda-tutorial 标准流程
+         → 走 dongchao-miaoda-tutorial 标准流程
          → 输出飞书云文档教程
 ```
 
@@ -107,7 +107,7 @@ lark-cli docs +fetch --api-version v2 --doc <note_doc_token> --doc-format markdo
 lark-cli docs +fetch --api-version v2 --doc <verbatim_doc_token> --doc-format markdown
 ```
 
-### Step D：将逐字稿作为 must_use 资料输入 miaoda-tutorial
+### Step D：将逐字稿作为 must_use 资料输入 dongchao-miaoda-tutorial
 
 - 逐字稿 → `must_use`（教程必须基于视频实际内容）
 - AI 总结 → `supporting`（参考结构，但教程要重新组织）
@@ -115,7 +115,7 @@ lark-cli docs +fetch --api-version v2 --doc <verbatim_doc_token> --doc-format ma
 
 **关键原则：** 教程 ≠ 视频逐字稿的重新排版。教程要从视频内容中提取可学习的知识点，按学习者路径重新组织。视频是原材料，不是骨架。
 
-### Step E：走 miaoda-tutorial 标准流程
+### Step E：走 dongchao-miaoda-tutorial 标准流程
 
 从 Step 0 开始，Brief 中：
 - `topic` = 妙记标题

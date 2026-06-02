@@ -1,5 +1,5 @@
 ---
-name: feishu-cron
+name: dongchao-feishu-cron
 version: 1.0.0
 description: |-
   飞书Cron定时任务创建与排障。创建飞书定向推送的定时任务，

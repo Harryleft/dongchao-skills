@@ -1,5 +1,5 @@
 ---
-name: feishu-bitable-design
+name: dongchao-feishu-bitable-design
 version: 1.2.0
 description: |-
   多维表格业务设计方法论。搭建前必须遵循的「六个问题+三个维度」框架，

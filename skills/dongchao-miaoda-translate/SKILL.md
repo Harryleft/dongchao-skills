@@ -1,5 +1,5 @@
 ---
-name: miaoda-translate
+name: dongchao-miaoda-translate
 version: 2.0.0
 description: |-
   将文本从一种语言翻译为另一种语言，保留原文格式和结构。三种模式：
@@ -273,7 +273,7 @@ metadata:
 
 ## 自定义术语表
 
-用户可提供自定义术语表来覆盖内置翻译。术语表存放在 `~/workspace/agent/plugin-skills/miaoda-translate/glossary.md`。
+用户可提供自定义术语表来覆盖内置翻译。术语表存放在 `~/workspace/agent/plugin-skills/dongchao-miaoda-translate/glossary.md`。
 
 ### 文件格式
 

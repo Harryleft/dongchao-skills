@@ -199,7 +199,7 @@
 ## SKILL 元信息
 
 ```yaml
-name: feishu-ai-components
+name: dongchao-feishu-ai-components
 description: 飞书AI组件选型指南 — 根据业务场景匹配合适的AI组件
 version: 1.0.0
 author: 沈东潮
