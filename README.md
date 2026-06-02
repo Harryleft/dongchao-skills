@@ -11,7 +11,3 @@
 | `dongchao-miaoda-translate` | 翻译 |
 | `dongchao-miaoda-tutorial` | 教程生成（含妙记转教程、FDE 场景特化） |
 | `dongchao-superforecasting` | 超级预测 |
-
-## 安装
-
-见 [INSTALL.md](./INSTALL.md)。
