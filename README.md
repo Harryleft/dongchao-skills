@@ -14,7 +14,6 @@
 | `dongchao-founders-playbook` | 创始人手册 |
 | `dongchao-miaoda-translate` | 翻译 |
 | `dongchao-miaoda-tutorial` | 教程生成（含妙记转教程、FDE 场景特化） |
-| `dongchao-openclaw-upgrade-troubleshoot` | OpenClaw 升级故障排查 |
 | `dongchao-superforecasting` | 超级预测 |
 
 ## 安装

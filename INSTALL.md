@@ -53,7 +53,7 @@ for skill in dongchao-miaoda-translate dongchao-miaoda-tutorial; do
 done
 
 # 通用类 Skill
-for skill in dongchao-founders-playbook dongchao-openclaw-upgrade-troubleshoot dongchao-superforecasting; do
+for skill in dongchao-founders-playbook dongchao-superforecasting; do
   cp -r /tmp/dongchao-skills/skills/$skill $AGENT_ROOT/skills/
 done
 ```
@@ -74,7 +74,6 @@ done
       "dongchao-founders-playbook": { "enabled": true },
       "dongchao-miaoda-translate": { "enabled": true },
       "dongchao-miaoda-tutorial": { "enabled": true },
-      "dongchao-openclaw-upgrade-troubleshoot": { "enabled": true },
       "dongchao-superforecasting": { "enabled": true }
     }
   }
