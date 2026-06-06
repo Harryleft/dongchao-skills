@@ -8,6 +8,7 @@
 - 第三方依赖 Skill 可以放入本仓库作为子 Skill，但不加 `dongchao-` 前缀，并在说明中标注来源。
 - 项目内 `.codex/skills/<skill-name>` 应软链接到本仓库 `skills/<skill-name>`。
 - 修改自研 Skill 时优先修改本仓库，再让项目软链接自然生效。
+- 内部链接、人员 ID、群聊 ID、密钥和租户配置只放在项目本地私有配置中，不提交到 Git。
 
 ## Skills
 
@@ -24,4 +25,5 @@
 | `dongchao-miaoda-tutorial` | 教程生成（含妙记转教程、FDE 场景特化） |
 | `dongchao-superforecasting` | 超级预测 |
 | `dongchao-wechat-to-feishu-doc` | 微信文章转飞书文档 |
+| `dongchao-youmind-karpathy-rss-to-lark` | YouMind Karpathy RSS 日报转飞书文档 |
 | `wechat-article-to-markdown` | 第三方依赖子 Skill：微信公众号文章抓取为 Markdown |

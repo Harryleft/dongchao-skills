@@ -7,3 +7,6 @@ __pycache__/
 output/
 debug.html
 *.log
+.env*
+*.local
+.codex/skill-config/

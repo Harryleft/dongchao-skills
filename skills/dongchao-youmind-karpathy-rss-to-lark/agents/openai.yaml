@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dongchao YouMind Karpathy RSS to Lark"
+  short_description: "生成 YouMind Karpathy RSS 日报并创建飞书文档"
+  default_prompt: "Use $dongchao-youmind-karpathy-rss-to-lark to run the YouMind Karpathy RSS daily report and create a Feishu document, then hand off publishing to dongchao-feishu-publish."
