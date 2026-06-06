@@ -1,0 +1,6 @@
+interface:
+  display_name: "微信文章转飞书文档"
+  short_description: "转换微信富文本文章为飞书云文档"
+  default_prompt: "Use $dongchao-wechat-to-feishu-doc to convert this WeChat article into a formatted Feishu cloud document."
+policy:
+  allow_implicit_invocation: true

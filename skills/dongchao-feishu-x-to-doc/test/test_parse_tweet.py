@@ -100,6 +100,78 @@ def test_inline_styles():
     print("✅ test_inline_styles passed")
 
 
+def test_article_list_entity_map():
+    """Article entityMap can be returned as a list by fxtwitter."""
+    data = {
+        "tweet": {
+            "text": "",
+            "author": {"name": "Author", "screen_name": "author1"},
+            "article": {
+                "content": {
+                    "blocks": [
+                        {
+                            "type": "unstyled",
+                            "text": "Read more",
+                            "entityRanges": [{"offset": 0, "length": 9, "key": 0}],
+                        }
+                    ],
+                    "entityMap": [
+                        {"key": "0", "value": {"type": "LINK", "url": "https://example.com"}}
+                    ],
+                }
+            },
+        }
+    }
+    md = run_parse(data)
+    assert "[Read more](https://example.com)" in md
+    print("✅ test_article_list_entity_map passed")
+
+
+def test_article_media_entities():
+    """Article MEDIA entities are converted into image Markdown."""
+    data = {
+        "tweet": {
+            "text": "",
+            "author": {"name": "Author", "screen_name": "author1"},
+            "article": {
+                "cover_media": {
+                    "media_info": {"original_img_url": "https://example.com/cover.jpg"}
+                },
+                "content": {
+                    "blocks": [
+                        {
+                            "type": "atomic",
+                            "text": " ",
+                            "entityRanges": [{"offset": 0, "length": 1, "key": 0}],
+                        }
+                    ],
+                    "entityMap": [
+                        {
+                            "key": "0",
+                            "value": {
+                                "type": "MEDIA",
+                                "data": {
+                                    "mediaItems": [{"mediaId": "123"}]
+                                },
+                            },
+                        }
+                    ],
+                },
+                "media_entities": [
+                    {
+                        "media_id": "123",
+                        "media_info": {"original_img_url": "https://example.com/body.jpg"},
+                    }
+                ],
+            },
+        }
+    }
+    md = run_parse(data)
+    assert "![](https://example.com/cover.jpg)" in md
+    assert "![](https://example.com/body.jpg)" in md
+    print("✅ test_article_media_entities passed")
+
+
 def test_empty_tweet():
     """Tweet with minimal data."""
     data = {"tweet": {"author": {"name": "Min", "screen_name": "min"}}}
@@ -127,6 +199,8 @@ if __name__ == "__main__":
     test_basic_tweet()
     test_article_tweet()
     test_inline_styles()
+    test_article_list_entity_map()
+    test_article_media_entities()
     test_empty_tweet()
     test_date_formatting()
-    print("\n🎉 All 5 unit tests passed!")
+    print("\n🎉 All 7 unit tests passed!")

@@ -1,0 +1,6 @@
+interface:
+  display_name: "飞书发布"
+  short_description: "归档、授权并通知飞书文档"
+  default_prompt: "Use $dongchao-feishu-publish to archive this Feishu document, set permissions, and notify the target group."
+policy:
+  allow_implicit_invocation: true

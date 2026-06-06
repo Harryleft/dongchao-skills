@@ -42,8 +42,29 @@ def parse_inline_styles(text: str, ranges: list) -> str:
     return text
 
 
-def parse_entity_links(text: str, entity_ranges: list, entity_map: dict) -> str:
+def normalize_entity_map(entity_map) -> dict:
+    """Normalize X Article entityMap variants into a string-keyed dict."""
+    if isinstance(entity_map, dict):
+        return entity_map
+
+    if isinstance(entity_map, list):
+        normalized = {}
+        for index, item in enumerate(entity_map):
+            if not isinstance(item, dict):
+                continue
+
+            key = item.get("key", index)
+            value = item.get("value", item)
+            normalized[str(key)] = value
+        return normalized
+
+    return {}
+
+
+def parse_entity_links(text: str, entity_ranges: list, entity_map) -> str:
     """Apply entity ranges (LINK) to text."""
+    entity_map = normalize_entity_map(entity_map)
+
     if not entity_ranges or not entity_map:
         return text
 
@@ -72,7 +93,14 @@ def parse_entity_links(text: str, entity_ranges: list, entity_map: dict) -> str:
 def parse_article(article: dict) -> str:
     """Parse X Article blocks into Markdown."""
     blocks = article.get("content", {}).get("blocks", [])
-    entity_map = article.get("content", {}).get("entityMap", {})
+    entity_map = normalize_entity_map(article.get("content", {}).get("entityMap", {}))
+    media_by_id = {}
+    for media in article.get("media_entities", []):
+        media_id = str(media.get("media_id", ""))
+        image_url = media.get("media_info", {}).get("original_img_url")
+        if media_id and image_url:
+            media_by_id[media_id] = image_url
+
     lines = []
 
     for block in blocks:
@@ -94,14 +122,20 @@ def parse_article(article: dict) -> str:
         elif block_type == "ordered-list-item":
             lines.append(f"1. {text}")
         elif block_type == "atomic":
-            # Media block - extract image URL from entity map
+            # Media block - extract image URL from entity map or article media_entities.
             for er in entity_ranges:
                 key = str(er.get("key", ""))
                 entity = entity_map.get(key, {})
                 if entity.get("type") == "IMAGE":
                     url = entity.get("url", entity.get("src", ""))
                     if url:
-                        lines.append(f'<image url="{url}" />')
+                        lines.append(f"![]({url})")
+                elif entity.get("type") == "MEDIA":
+                    for item in entity.get("data", {}).get("mediaItems", []):
+                        media_id = str(item.get("mediaId", ""))
+                        url = media_by_id.get(media_id)
+                        if url:
+                            lines.append(f"![]({url})")
         else:  # unstyled and others
             if text:
                 lines.append(text)
@@ -159,6 +193,9 @@ def build_markdown(data: dict) -> str:
 
     # Body content
     if article:
+        cover_url = article.get("cover_media", {}).get("media_info", {}).get("original_img_url")
+        if cover_url:
+            parts.append(f"![]({cover_url})")
         parts.append(parse_article(article))
     else:
         # Regular tweet
