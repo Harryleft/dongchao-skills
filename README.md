@@ -1,14 +1,6 @@
 # Dongchao Skills
 
-个人自研 Skill 统一放在本仓库的 `skills/<skill-name>` 下，并强制使用 `dongchao-` 前缀命名。各项目通过软链接引用这里的 Skill，不维护真实副本。
 
-## 管理约定
-
-- 个人自研 Skill 必须以 `dongchao-` 开头。
-- 第三方依赖 Skill 可以放入本仓库作为子 Skill，但不加 `dongchao-` 前缀，并在说明中标注来源。
-- 项目内 `.codex/skills/<skill-name>` 应软链接到本仓库 `skills/<skill-name>`。
-- 修改自研 Skill 时优先修改本仓库，再让项目软链接自然生效。
-- 内部链接、人员 ID、群聊 ID、密钥和租户配置只放在项目本地私有配置中，不提交到 Git。
 
 ## Skills
 
