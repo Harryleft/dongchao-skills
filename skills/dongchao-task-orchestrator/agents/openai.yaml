@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务编排法"
+  short_description: "将复杂需求拆成可执行可验收的 WorkTree"
+  default_prompt: "Use $dongchao-task-orchestrator to turn this requirements document into a MECE, executable WorkTree."

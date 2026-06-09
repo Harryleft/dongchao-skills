@@ -24,6 +24,7 @@
 | `dongchao-miaoda-translate` | 翻译 |
 | `dongchao-miaoda-tutorial` | 教程生成（含妙记转教程、FDE 场景特化） |
 | `dongchao-superforecasting` | 超级预测 |
+| `dongchao-task-orchestrator` | 任务编排法 |
 | `dongchao-wechat-to-feishu-doc` | 微信文章转飞书文档 |
 | `dongchao-youmind-karpathy-rss-to-lark` | YouMind Karpathy RSS 日报转飞书文档 |
 | `wechat-article-to-markdown` | 第三方依赖子 Skill：微信公众号文章抓取为 Markdown |
