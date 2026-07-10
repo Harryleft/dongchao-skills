@@ -1,0 +1,4 @@
+interface:
+  display_name: "多维表格插件交付"
+  short_description: "开发、验证并按需部署服务地址型飞书多维表格自定义插件"
+  default_prompt: "Use $dongchao-feishu-base-plugin-delivery to scope the required server and domain resources, then build and validate this service-URL Feishu Base custom plugin."
