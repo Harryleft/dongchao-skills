@@ -8,6 +8,7 @@
 |-------|------|
 | `dongchao-feishu-ai-components` | 飞书 AI 组件 |
 | `dongchao-feishu-ai-viz-components` | 飞书 AI 可视化组件 |
+| `dongchao-feishu-base-plugin-delivery` | 多维表格服务地址型自定义插件交付 |
 | `dongchao-feishu-bitable-design` | 多维表格设计 |
 | `dongchao-feishu-cron` | 飞书定时任务 |
 | `dongchao-feishu-publish` | 飞书文档发布治理 |
